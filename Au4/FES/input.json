@@ -1,0 +1,38 @@
+{
+        "walkers": 1,
+	"input": ["md1.i"],
+	"md_iterations" : 1000000,
+	"qm_iterations" : 10,
+        "wf_iterations" : 5,
+	"CVs" : 
+	[
+                {       "type" : "GyrationTensor",
+                        "atom_ids" : [1,2,3,4],
+                        "component" : "Rg"
+                }
+	],
+	"methods": [
+		{
+		"type" : "ABF",
+		"CV_lower_bounds" : [11.5],
+		"CV_upper_bounds" : [20.5],
+		"CV_bins" : [90],
+		"CV_restraint_minimums" : [11.2],
+		"CV_restraint_maximums" : [20.8],
+		"CV_restraint_spring_constants" : [0.1],
+		"timestep" : 80,
+		"CV_isperiodic": [false],
+		"minimum_count" : 100,
+		"output_file" : "F_Rg_out",
+		"output_frequency" : 1000,
+		"unit_conversion" : 1836.152674,
+		"frequency" : 1,
+                "restart": false,
+		"cvs" :[0]
+	}
+	],
+	"logger" : {
+		"output_file" : ["cvs0.dat"],
+		"frequency" : 1
+	}
+}
